@@ -23,8 +23,8 @@ const Home = () => {
   };
 
   return (
-    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <div className="flex items-center justify-center h-[90vh] mx-10 my-10">
+      <script src="https://accounts.google.com/gsi/client" async defer></script>
       <div className="md:flex-1" />
       <div className="flex-1 bg-beige-light h-full max-w-full p-10">
         <div className="border-2 border-beige-dark items-center flex flex-col justify-start h-full rounded-2xl">
