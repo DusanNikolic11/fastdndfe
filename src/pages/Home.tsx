@@ -25,23 +25,23 @@ const Home = () => {
   return (
     <div className="flex items-center justify-center h-[90vh] mx-10 my-10">
       <script src="https://accounts.google.com/gsi/client" async defer></script>
-      <script>
-        function handleCredentialResponse(response) {
-          console.log("Encoded JWT ID token: " + response.credential);
-        }
-        window.onload = function () {
-          google.accounts.id.initialize({
-            client_id: "695030285071-oc4e483rn2791srvc7tep6a0dto8ltkr.apps.googleusercontent.com",
-            callback: handleCredentialResponse
-          });
-          google.accounts.id.renderButton(
-            document.getElementById("buttonDiv"),
-            { theme: "outline", size: "large" }  // customization attributes
-          );
-          google.accounts.id.prompt(); // also display the One Tap dialog
-        }
-    </script>
-    <div id="buttonDiv"></div> 
+      <div id="g_id_onload"
+        data-client_id="695030285071-oc4e483rn2791srvc7tep6a0dto8ltkr.apps.googleusercontent.com"
+        data-context="signin"
+        data-ux_mode="popup"
+        data-login_uri="https://api-dev.fastdnd.net/v1/google/login"
+        data-nonce=""
+        data-auto_prompt="false">
+      </div>
+
+      <div className="g_id_signin"
+        data-type="standard"
+        data-shape="pill"
+        data-theme="outline"
+        data-text="signin_with"
+        data-size="large"
+        data-logo_alignment="left">
+      </div>
 
       <div className="md:flex-1" />
       <div className="flex-1 bg-beige-light h-full max-w-full p-10">
